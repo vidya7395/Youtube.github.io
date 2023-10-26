@@ -1,13 +1,18 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import MainContainer from "./MainContainer";
+import { Outlet } from "react-router-dom";
+import Head from "./Head";
 
 const Body = () => {
   return (
-    <div className="flex">
-      <Sidebar></Sidebar>
-      <MainContainer></MainContainer>
-    </div>
+    <>
+      <Head></Head>
+      <div className="flex h-full overflow-hidden">
+        <Sidebar></Sidebar>
+        {/* <MainContainer></MainContainer> */}
+        <Outlet></Outlet>
+      </div>
+    </>
   );
 };
 
