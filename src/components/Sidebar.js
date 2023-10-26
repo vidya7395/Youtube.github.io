@@ -17,7 +17,7 @@ const Sidebar = () => {
   // This type of coding pattern is known as Early return
   if (!isMenuOpen) return null;
   return (
-    <div className="w-[240px]">
+    <div className="w-[240px] overflow-auto">
       <MenuItems></MenuItems>
     </div>
   );
